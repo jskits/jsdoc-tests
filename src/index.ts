@@ -42,7 +42,6 @@ export const jsdocTests = (
     });
     const promises: Promise<void>[] = [];
     let index = 0;
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
     const markdown = require('markdown-it')({
       highlight(text: string, lang: string) {
         if (languages.includes(lang)) {
@@ -51,7 +50,6 @@ export const jsdocTests = (
             [filename, index, 'snap'].join('.') + extname(filePath)
           );
           writeFileSync(path, text, 'utf8');
-          // eslint-disable-next-line @typescript-eslint/no-var-requires
           const result = require(path);
           let fn: ((...args: unknown[]) => Promise<void>) | null = null;
           if (typeof result === 'function') {
@@ -64,7 +62,6 @@ export const jsdocTests = (
         }
       },
     });
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     comments!.forEach(({ value }) => {
       if (/^\*\n/.test(value)) {
         const markdownText = value.replace(/\n\s*\*/g, '\n');
