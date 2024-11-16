@@ -44,3 +44,7 @@ test('test "add" function', () => {
   jsdocTests('./src/example.ts');
 });
 ```
+
+## License
+
+`jsdoc-tests` is [MIT licensed](https://github.com/testkits/jsdoc-tests/blob/master/LICENSE).
