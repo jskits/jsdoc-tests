@@ -44,7 +44,7 @@ export const jsdocTests = (
     let index = 0;
     // eslint-disable-next-line @typescript-eslint/no-var-requires
     const markdown = require('markdown-it')({
-      highlight(text, lang) {
+      highlight(text: string, lang: string) {
         if (languages.includes(lang)) {
           const path = resolve(
             dirname,

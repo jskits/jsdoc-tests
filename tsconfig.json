@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "isolatedModules": true,
+    "moduleResolution": "node16",
+    "module": "node16",
+    "noEmit": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "jsx": "react",
+    "lib": ["es2019", "ESNext.Promise", "dom"],
+    "strict": true,
+    "stripInternal": true
+  },
+  "exclude": ["examples", "templates"]
+}
